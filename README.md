@@ -1,6 +1,6 @@
 # Laboratorio De Programacion 5º4ª - Tiziano Pirez
 
-Bienvenido al repositorio de mis trabajos en C++. Aquí encontrarás una colección de proyectos y ejercicios que he realizado para mejorar mis habilidades en programación. Cada proyecto incluye una breve descripción, instrucciones de instalación y uso.
+Bienvenido al repositorio de mis trabajos en C++. Aca vas a encontrar mis codigos de c++ de 2025.
 
 ## Contenido
 
