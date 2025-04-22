@@ -4,6 +4,6 @@ Bienvenido al repositorio de mis trabajos en C++. Aquí encontrarás una colecci
 
 ## Contenido
 
-- [Laboratorio 1 : Condicionales](#Laboratorio01)
-- [Laboratorio 2: Bucles](#Laboratorio02)
-- [Laboratorio 3 Vectores y Matrices](#Laboratorio03)
+- [Laboratorio 1 : Condicionales](#Laboratorio.01)
+- [Laboratorio 2: Bucles](#Laboratorio2)
+- [Laboratorio 3 Vectores y Matrices](#Laboratorio3)
