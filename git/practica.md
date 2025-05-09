@@ -26,4 +26,10 @@ aca le digo ala maquina que me devuelva los valores q ingrese aver si puse bien 
    
    ![image](https://github.com/user-attachments/assets/d4feac0c-0da4-47c7-8311-c38515427f47)
 
+   5. Conectar con GitHub y hacer cambios y commits
+   ![Screenshot_1](https://github.com/user-attachments/assets/f4cb4156-6c30-4e7c-b44d-a076b94e08bd)
+
+
+   
+
 
