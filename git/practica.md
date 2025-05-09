@@ -37,7 +37,16 @@ Compruebo si me tomo los datos:
 
    ![Screenshot_1](https://github.com/user-attachments/assets/f4cb4156-6c30-4e7c-b44d-a076b94e08bd)
 
+---
 
+---
+
+### Comprobacion:
+
+   ![image](https://github.com/user-attachments/assets/18a34ac2-11da-4c04-964f-d438b7b9b39b)
+
+    # Url del repo: https://github.com/tizixpk/Git.Repo
    
+---
 
 
