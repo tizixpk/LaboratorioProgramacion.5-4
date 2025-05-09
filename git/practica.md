@@ -1,3 +1,14 @@
+# Practica Git
+
+**Nombre:** Tiziano Pirez  
+**Curso:** 5to 4ta
+
+📚 Basado en el material: **Guía Inicial de Uso de Git con GitHub**
+
+---
+
+## Respuestas:
+
 1. Instalación de Git
    
 aca verifico que esta intalado 
