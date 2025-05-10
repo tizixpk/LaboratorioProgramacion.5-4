@@ -8,7 +8,7 @@ int main () {
         cin >> Numeros[i];
         Suma = Suma + Numeros [i];
         }
-float MediaAritmerica = suma/10;
+float MediaAritmerica = Suma/10;
 cout << "La suma de los numeros es: " << Suma << endl;
 cout << "La media aritmerica es: " << MediaAritmerica << endl;
 return 0;
