@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int main {
+int main () {
     int Numeros [10];
     int Suma = 0;
     for ( int i=0; i<10; i++) {
