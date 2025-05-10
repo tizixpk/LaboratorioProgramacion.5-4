@@ -1,0 +1,23 @@
+name: Compilar C++ con G++
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar compilador
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Compilar archivos C++
+      run: |
+        mkdir build
+        g++ -std=c++17 -Wall -Wextra -o build/program *.cpp
