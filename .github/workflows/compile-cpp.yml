@@ -1,4 +1,4 @@
-name: Compilar C++ con G++
+name: Compilar C++ en subcarpetas
 
 on:
   push:
@@ -17,7 +17,14 @@ jobs:
     - name: Instalar compilador
       run: sudo apt update && sudo apt install -y g++
 
-    - name: Compilar archivos C++
+    - name: Compilar todos los códigos C++
       run: |
-        mkdir build
-        g++ -std=c++17 -Wall -Wextra -o build/program *.cpp
+        mkdir -p build
+        for dir in Laboratorio*; do
+          echo "Compilando $dir..."
+          mkdir -p build/$dir
+          for file in $dir/*.cpp; do
+            filename=$(basename "$file" .cpp)
+            g++ -std=c++17 -Wall -Wextra -o build/$dir/$filename $file
+          done
+        done
