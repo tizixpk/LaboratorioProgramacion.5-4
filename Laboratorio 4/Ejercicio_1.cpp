@@ -32,7 +32,9 @@ cout << endl;
     for (int i=0; i < MAXF; i++){
     	Suma = Suma + matriz[i] [0];
 	}
+	cout << endl;
     cout << "Suma de la columna 1: " <<Suma << endl; 
+    cout << endl;
     
     //punto d
       for (int i=0; i < MAXF -1; i++){
@@ -45,6 +47,7 @@ cout << endl;
     		
 		}
 	}
+	cout << endl;
 	
 	 cout << "Primera Columna Ordenada:" << endl;
 	 for (int i=0; i < MAXF ;i++){
