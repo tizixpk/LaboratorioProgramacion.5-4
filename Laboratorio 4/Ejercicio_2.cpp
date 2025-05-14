@@ -2,9 +2,10 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-const int MAXF = 3;
-const int MAXC = 5;
+
 int main() {
+    const int MAXF = 3;
+    const int MAXC = 5;
     int matriz[MAXF][MAXC];
     srand(time(0));
     for (int i = 0; i < MAXF; i++) {
@@ -13,55 +14,56 @@ int main() {
         }
     }
 
-    // 1 Mostrar la matriz completa
-    cout << "Matriz:\n";
+    cout << "Matriz completa:" << endl;
     for (int i = 0; i < MAXF; i++) {
         for (int j = 0; j < MAXC; j++) {
-            cout << matriz[i][j] << "\t";
+            cout << "|" << matriz[i][j] << "|\t";
         }
         cout << endl;
     }
+    cout << endl;
 
     //punto a
-    cout << "\nDiagonal principal:\n";
+    cout << "Diagonal principal:" << endl;
     for (int i = 0; i < MAXF && i < MAXC; i++) {
-        cout << matriz[i][i] << " ";
+        cout << "|" << matriz[i][i] << "| ";
     }
-    cout << endl;
+    cout << endl << endl;
 
     // punto b
     int sumaFila = 0;
     for (int j = 0; j < MAXC; j++) {
         sumaFila += matriz[0][j];
     }
-    float promedio = static_cast<float>(sumaFila) ;
-    cout << "\nPromedio de la primera fila: " << promedio << endl;
+    float promedio = (float)sumaFila / MAXC;
+    cout << "Promedio de la primera fila: " << promedio << endl << endl;
 
     //punto c
     int contador = 0;
-    cout << "Elementos de la primera fila mayores al promedio:\n";
+    cout << "Valores de la primera fila mayores al promedio:" << endl;
     for (int j = 0; j < MAXC; j++) {
         if (matriz[0][j] > promedio) {
-            cout << matriz[0][j] << " ";
+            cout << "|" << matriz[0][j] << "| ";
             contador++;
         }
     }
-    cout << "\nCantidad: " << contador << endl;
+    cout << endl << "Cantidad: " << contador << endl << endl;
 
     //punto d
     for (int i = 0; i < MAXF - 1; i++) {
         for (int j = i + 1; j < MAXF; j++) {
             if (matriz[i][4] < matriz[j][4]) {
-                int temp = matriz[i][4];
+                int aux = matriz[i][4];
                 matriz[i][4] = matriz[j][4];
-                matriz[j][4] = temp;
+                matriz[j][4] = aux;
             }
         }
     }
 
-    cout << "\nÚltima columna ordenada de mayor a menor:\n";
+ 
+    cout << "Última columna ordenada de mayor a menor:" << endl;
     for (int i = 0; i < MAXF; i++) {
-        cout << matriz[i][4] << endl;
+        cout << "|" << matriz[i][4] << "|" << endl;
     }
 
     return 0;
