@@ -2,7 +2,6 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-
 int main() {
     const int MAXF = 3;
     const int MAXC = 5;
