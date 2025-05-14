@@ -2,50 +2,45 @@
 #include <cstdlib>
 #include <ctime>
 using namespace std;
-
-const int maxf = 3;
-const int maxc = 5;
-
+const int MAXF = 3;
+const int MAXC = 5;
 int main() {
-    int matriz[maxf][maxc];
-
+    int matriz[MAXF][MAXC];
     srand(time(0));
-
-    // Cargar matriz con números aleatorios del 1 al 100
-    for (int i = 0; i < maxf; i++) {
-        for (int j = 0; j < maxc; j++) {
+    for (int i = 0; i < MAXF; i++) {
+        for (int j = 0; j < MAXC; j++) {
             matriz[i][j] = rand() % 100 + 1;
         }
     }
 
     // 1 Mostrar la matriz completa
     cout << "Matriz:\n";
-    for (int i = 0; i < maxf; i++) {
-        for (int j = 0; j < maxc; j++) {
+    for (int i = 0; i < MAXF; i++) {
+        for (int j = 0; j < MAXC; j++) {
             cout << matriz[i][j] << "\t";
         }
         cout << endl;
     }
 
-    // 2.a) Visualizar la diagonal principal (solo si es cuadrada: 3x3)
+    //punto a
     cout << "\nDiagonal principal:\n";
-    for (int i = 0; i < maxf && i < maxc; i++) {
+    for (int i = 0; i < MAXF && i < MAXC; i++) {
         cout << matriz[i][i] << " ";
     }
     cout << endl;
 
-    // 2.b) Calcular el promedio de la primera fila (fila 0)
+    // punto b
     int sumaFila = 0;
-    for (int j = 0; j < maxc; j++) {
+    for (int j = 0; j < MAXC; j++) {
         sumaFila += matriz[0][j];
     }
-    float promedio = static_cast<float>(sumaFila) / maxc;
+    float promedio = static_cast<float>(sumaFila) ;
     cout << "\nPromedio de la primera fila: " << promedio << endl;
 
-    // 2.c) Contar y mostrar elementos de la primera fila que superan al promedio
+    //punto c
     int contador = 0;
     cout << "Elementos de la primera fila mayores al promedio:\n";
-    for (int j = 0; j < maxc; j++) {
+    for (int j = 0; j < MAXC; j++) {
         if (matriz[0][j] > promedio) {
             cout << matriz[0][j] << " ";
             contador++;
@@ -53,11 +48,10 @@ int main() {
     }
     cout << "\nCantidad: " << contador << endl;
 
-    // 2.d) Ordenar la última columna (columna 4) de mayor a menor
-    for (int i = 0; i < maxf - 1; i++) {
-        for (int j = i + 1; j < maxf; j++) {
+    //punto d
+    for (int i = 0; i < MAXF - 1; i++) {
+        for (int j = i + 1; j < MAXF; j++) {
             if (matriz[i][4] < matriz[j][4]) {
-                // Intercambiar solo la última columna
                 int temp = matriz[i][4];
                 matriz[i][4] = matriz[j][4];
                 matriz[j][4] = temp;
@@ -65,9 +59,8 @@ int main() {
         }
     }
 
-    // Mostrar solo la última columna ordenada
     cout << "\nÚltima columna ordenada de mayor a menor:\n";
-    for (int i = 0; i < maxf; i++) {
+    for (int i = 0; i < MAXF; i++) {
         cout << matriz[i][4] << endl;
     }
 
