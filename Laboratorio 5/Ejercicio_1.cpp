@@ -5,7 +5,7 @@ using namespace std;
 const int F = 4;
 const int C = 4;
 
-// Función para imprimir la matriz
+// cree esta función para imprimir la matriz  y ahorrar code
 void imprimirMatriz(int matriz[F][C]) {
     for (int i = 0; i < F; i++) {
         for (int j = 0; j < C; j++) {
@@ -19,7 +19,7 @@ int main() {
     srand(time(0));
     int matriz[F][C];
 
-    // Llenar la matriz con números aleatorios del 1 al 99
+    // lleno la matriz con números aleatorios del 1 al 99
     for (int i = 0; i < F; i++) {
         for (int j = 0; j < C; j++) {
             matriz[i][j] = rand() % 99 + 1;
@@ -36,7 +36,7 @@ int main() {
             sumaTotal += matriz[i][j];
 
     float promedio = (float)sumaTotal / (F * C);
-    cout << "\n// Promedio general de la matriz\n";
+    cout << "\n// Promedio general de la matriz\n"; // el /n es para que quede bien cuando se ejecuta x eso lo pongo
     cout << "Promedio: " << promedio << endl;
 
     // suma de pares por columna
@@ -118,7 +118,7 @@ int main() {
     // intercambiar la columna 2 y 4 (índices 1 y 3)
     cout << "\n// Intercambiar la columna 2 y 4\n";
     for (int i = 0; i < F; i++) {
-        int temp = matriz[i][1];
+        int temp = matriz[i][1];   // la varible temp es para manipular la matriz  y imtercambiar las columnas
         matriz[i][1] = matriz[i][3];
         matriz[i][3] = temp;
     }
