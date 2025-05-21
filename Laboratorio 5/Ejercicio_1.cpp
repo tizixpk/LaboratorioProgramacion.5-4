@@ -1,9 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std;
-
 const int F = 4;
 const int C = 4;
 
