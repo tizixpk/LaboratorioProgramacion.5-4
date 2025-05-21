@@ -11,7 +11,7 @@ void imprimirMatriz(int matriz[F][C]) {
         for (int j = 0; j < C; j++) {
             cout << matriz[i][j] << "\t";
         }
-        cout << endl;0
+        cout << endl;
     }
 }
 
