@@ -1,13 +1,12 @@
-#include <iostream> 
+#include <iostream>
 using namespace std;
-int a, b, r;
-int Ejercicio_1(int , int ){
-return r = a > b ? a : b;
+int Ejercicio_1(int x, int y) {
+    return x > y ? x : y;
 }
 int main() {
-cout << "ingresa los digitos" << endl;
-	cin >> a;
-	cin >> b;
-cout << "Mayor: "  << Ejercicio_1(a , b) << endl;
-return 0;
+    int a, b;
+    cout << "Ingresa dos números enteros: ";
+    cin >> a >> b;
+    cout << "Mayor: " << Ejercicio_1(a, b) << endl;
+    return 0;
 }
