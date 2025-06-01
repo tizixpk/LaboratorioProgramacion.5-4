@@ -10,3 +10,4 @@ Bienvenido al repositorio de mis trabajos en C++. Aca vas a encontrar mis codigo
 - [Laboratorio Opcional: Git - Github ](/git)
 - [Laboratorio 4: Matrices](/Laboratorio%204)
 - [Laboratorio 5: Vectores Y Matrices](/Laboratorio%205)
+- [Laboratorio 6: Funciones](/Laboratorio%206)
