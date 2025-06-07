@@ -48,40 +48,59 @@ void sumaImparesPorFila(int m[F][C]) {
     }
 }
 
-// Buscar posición del máximo o mínimo (según el parámetro)
-void buscarValor(int m[F][C], bool buscarMax) {
+// Buscar posición del máximo o mínimo (según el parámetro entero)
+void buscarValor(int m[F][C], int tipoBusqueda) {
     int val = m[0][0], fila = 0, col = 0;
-    for (int i = 0; i < F; i++)
-        for (int j = 0; j < C; j++)
-            if ((buscarMax && m[i][j] > val) || (!buscarMax && m[i][j] < val)) {
+    for (int i = 0; i < F; i++) {
+        for (int j = 0; j < C; j++) {
+            if ((tipoBusqueda == 1 && m[i][j] > val) || (tipoBusqueda == 0 && m[i][j] < val)) {
                 val = m[i][j];
                 fila = i;
                 col = j;
             }
-    cout << (buscarMax ? "Máximo" : "Mínimo") << ": " << val << " en (" << fila << ", " << col << ")\n";
+        }
+    }
+    if (tipoBusqueda == 1)
+        cout << "Máximo: " << val << " en (" << fila << ", " << col << ")\n";
+    else
+        cout << "Mínimo: " << val << " en (" << fila << ", " << col << ")\n";
 }
 
-// Ordenar fila ascendente
+
 void ordenarFilaAsc(int m[F][C], int fila) {
-    for (int i = 0; i < C - 1; i++)
-        for (int j = i + 1; j < C; j++)
-            if (m[fila][i] > m[fila][j])
-                swap(m[fila][i], m[fila][j]);
+    for (int i = 0; i < C - 1; i++) {
+        for (int j = i + 1; j < C; j++) {
+            if (m[fila][i] > m[fila][j]) {
+                int temp = m[fila][i];
+                m[fila][i] = m[fila][j];
+                m[fila][j] = temp;
+            }
+        }
+    }
 }
 
-// Ordenar columna descendente
+
 void ordenarColDesc(int m[F][C], int col) {
-    for (int i = 0; i < F - 1; i++)
-        for (int j = i + 1; j < F; j++)
-            if (m[i][col] < m[j][col])
-                swap(m[i][col], m[j][col]);
+    for (int i = 0; i < F - 1; i++) {
+        for (int j = i + 1; j < F; j++) {
+            if (m[i][col] < m[j][col]) {
+                int temp = m[i][col];
+                m[i][col] = m[j][col];
+                m[j][col] = temp;
+            }
+        }
+    }
 }
 
-// Intercambiar columnas
 void intercambiarColumnas(int m[F][C], int col1, int col2) {
-    for (int i = 0; i < F; i++)
-        swap(m[i][col1], m[i][col2]);
+    for (int i = 0; i < F; i++) {
+        int temp = m[i][col1];
+        m[i][col1] = m[i][col2];
+        m[i][col2] = temp;
+    }
 }
+
+
 
 int main() {
     srand(time(0));
