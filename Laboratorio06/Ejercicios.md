@@ -99,10 +99,10 @@ int main() {
 using namespace std;
 
 void eliminarEspacios(char cad[]) {
-    int j = 0;
-    for (int i = 0; cad[i] != '\0'; i++) {
+    int j = 0; // esta variable la use para q copie los caracteres sin espacio
+    for (int i = 0; cad[i] != '\0'; i++) {      // aca copio los que no son espacio
         if (cad[i] != ' ') {
-            cad[j++] = cad[i]; // copio solo si no es espacio
+            cad[j++] = cad[i]; // copiolos caracteres sin espacio ( j )  y le sumo a j  para dps mostrar cuantos son
         }
     }
     cad[j] = '\0'; // fin de cadena
@@ -140,7 +140,7 @@ int main() {
     cout << "ingrese un texto: ";
     cin.getline(texto, 100);
 
-    if (strlen(texto) > 10) { /7 el strlen mide la longitud  de la cadena texto q no sea >10
+    if (strlen(texto) > 10) { //7 el strlen mide la longitud  de la cadena texto q no sea >10
         cout << "teexto ingresado: " << texto << endl;
     } else {
         cout << "la cadenaa es menor o igual a 10 caracteres, no se muestra." << endl;
