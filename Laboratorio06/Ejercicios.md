@@ -40,7 +40,7 @@ using namespace std;
 int contarVocales(char cad[]) {
     int contador = 0;
     for (int i = 0; cad[i] != '\0'; i++) {
-        char c = tolower(cad[i]); // paso todo a minúscula
+        char c = tolower(cad[i]); // el tolower es lo contrario a toupper, convierte todo a miniscula, en este caso la cadena 
         if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u') {
             contador++;
         }
