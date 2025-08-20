@@ -8,12 +8,12 @@
 
 ```cpp
 #include <iostream>
-#include <cstring> // funciones de cstring
+#include <cstring> 
 using namespace std;
 
 void convertirMayuscula(char cad[]) {
     for (int i = 0; cad[i] != '\0'; i++) {
-        cad[i] = toupper(cad[i]); // convierte cada letra a mayúscula
+        cad[i] = toupper(cad[i]); // convierte cada letra a mayúscula hasta el /0 se detiene q seria el final de la cadena
     }
 }
 
@@ -137,13 +137,13 @@ using namespace std;
 
 int main() {
     char texto[100];
-    cout << "Ingrese un texto: ";
+    cout << "ingrese un texto: ";
     cin.getline(texto, 100);
 
-    if (strlen(texto) > 10) {
-        cout << "Texto ingresado: " << texto << endl;
+    if (strlen(texto) > 10) { /7 el strlen mide la longitud  de la cadena texto q no sea >10
+        cout << "teexto ingresado: " << texto << endl;
     } else {
-        cout << "La cadena es menor o igual a 10 caracteres, no se muestra." << endl;
+        cout << "la cadenaa es menor o igual a 10 caracteres, no se muestra." << endl;
     }
     return 0;
 }
@@ -166,8 +166,8 @@ int main() {
     cout << "Ingrese un texto: ";
     cin.getline(texto, 100);
 
-    strcpy(copia, texto); // función de cstring para copiar
-    cout << "Texto copiado: " << copia << endl;
+    strcpy(copia, texto); // la cadena q ingresa el usuario seria texto [] y con el strcpy lo copio ala cadena copia[]
+    cout << "texto copiado aca : " << copia << endl;
     return 0;
 }
 ```
@@ -194,7 +194,7 @@ int main() {
 
     int cmp = strcmp(cad1, cad2);
 
-    if (cmp == 0) {
+    if (cmp == 0) {             // el cmp  guarda el strmp ( si son iguales es 0 y si no 1 o -1)  de la cadena 1 y 2 
         cout << "Las cadenas son IGUALES." << endl;
     } else if (cmp < 0) {
         cout << cad1 << " es menor alfabeticamente que " << cad2 << endl;
